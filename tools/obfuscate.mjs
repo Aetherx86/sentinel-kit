@@ -99,38 +99,64 @@ function tokenizeJS(code) {
       continue;
     }
 
-    // Template literal (treat entire template incl. ${...} safely as raw chunk)
+    // Template literal. Static text stays raw. Each ${...} expression is tokenized on its own, so
+    // identifiers inside it are renamed together with the rest of the module.
     if (ch === '`') {
-      let start = i++;
-      let depth = 0;
+      let chunkStart = i++;
       while (i < n) {
         if (code[i] === '\\') {
           i += 2;
           continue;
         }
-        if (depth === 0 && code[i] === '`') {
+        if (code[i] === '`') {
           i++;
           break;
         }
         if (code[i] === '$' && code[i + 1] === '{') {
-          depth++;
-          i += 2;
-          continue;
-        }
-        if (depth > 0) {
-          if (code[i] === '{') depth++;
-          else if (code[i] === '}') depth--;
-          else if (code[i] === '\'' || code[i] === '"') {
-            const q = code[i++];
-            while (i < n && code[i] !== q) {
-              if (code[i] === '\\') i += 2;
-              else i++;
+          const exprStart = i + 2;
+          let j = exprStart;
+          let depth = 1;
+          while (j < n && depth > 0) {
+            const c = code[j];
+            if (c === '\\') {
+              j += 2;
+              continue;
             }
+            if (c === '\'' || c === '"') {
+              const q = c;
+              j++;
+              while (j < n && code[j] !== q) j += code[j] === '\\' ? 2 : 1;
+              j++;
+              continue;
+            }
+            if (c === '`') {
+              // A nested template: skip it whole, tracking its own ${ } nesting.
+              let d = 0;
+              j++;
+              while (j < n) {
+                if (code[j] === '\\') { j += 2; continue; }
+                if (d === 0 && code[j] === '`') break;
+                if (code[j] === '$' && code[j + 1] === '{') { d++; j += 2; continue; }
+                if (d > 0 && code[j] === '}') d--;
+                j++;
+              }
+              j++;
+              continue;
+            }
+            if (c === '{') depth++;
+            else if (c === '}') depth--;
+            j++;
           }
+          const text = code.slice(chunkStart, exprStart);
+          tokens.push({ type: 'template', value: text, raw: text });
+          for (const inner of tokenizeJS(code.slice(exprStart, j - 1))) tokens.push(inner);
+          chunkStart = j - 1;
+          i = j;
+          continue;
         }
         i++;
       }
-      const raw = code.slice(start, i);
+      const raw = code.slice(chunkStart, i);
       tokens.push({ type: 'template', value: raw, raw });
       prevSignificant = 'template';
       continue;
