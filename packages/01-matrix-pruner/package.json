@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-suite/matrix-pruner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Deterministic CI/CD test matrix pruner, zombie run detector, and compute savings ledger.",
   "main": "./dist/index.mjs",

@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-suite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Six deterministic B2B and prosumer micro-SaaS MVPs with obfuscated core kernels, build-time bundle obfuscation, and full verification suites.",

@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-suite/drift-sentinel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Deterministic PostgreSQL DDL lock-hazard analyzer and live-vs-shadow schema drift sentinel.",
   "main": "./dist/index.mjs",

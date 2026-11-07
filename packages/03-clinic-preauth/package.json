@@ -1,6 +1,6 @@
 {
   "name": "@sentinel-kit/clinic-preauth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Deterministic healthcare intake, ANSI X12 270/271 eligibility, pre-authorization rule verification, and CMS-1500 pre-check engine.",

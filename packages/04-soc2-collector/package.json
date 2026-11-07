@@ -1,6 +1,6 @@
 {
   "name": "@sentinel-kit/soc2-collector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Deterministic SOC2 and ISO/IEC 27001:2022 evidence collector, AES-256-GCM hash-chained vault, and binary PDF 1.4 audit binder generator.",
