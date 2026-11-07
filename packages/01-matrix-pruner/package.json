@@ -1,0 +1,20 @@
+{
+  "name": "@bootstrap-suite/matrix-pruner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Deterministic CI/CD test matrix pruner, zombie run detector, and compute savings ledger.",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs"
+  },
+  "bin": {
+    "matrix-pruner": "./dist/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --no-warnings --test test/matrix-pruner.test.ts"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}

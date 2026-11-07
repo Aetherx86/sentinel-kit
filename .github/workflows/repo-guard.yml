@@ -1,0 +1,23 @@
+name: Repo Guard Package
+
+on:
+  push:
+    tags:
+      - "v*.0.0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Test
+        run: python3 -m unittest test_repo_guard
+        working-directory: packages/07-repo-guard
+      - name: Run it on this repository
+        run: python3 packages/07-repo-guard/repo_guard.py .

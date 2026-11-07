@@ -1,0 +1,16 @@
+{
+  "name": "@sentinel-kit/stock-sentinel",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Deterministic storefront catalog extractor, CDN hysteresis state machine, and signed webhook stock sentinel.",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "bin": {
+    "stock-sentinel": "./dist/cli.mjs"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}

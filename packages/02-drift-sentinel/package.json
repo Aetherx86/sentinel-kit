@@ -1,0 +1,20 @@
+{
+  "name": "@bootstrap-suite/drift-sentinel",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Deterministic PostgreSQL DDL lock-hazard analyzer and live-vs-shadow schema drift sentinel.",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs"
+  },
+  "bin": {
+    "drift-sentinel": "./dist/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --no-warnings --test test/drift-sentinel.test.ts"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}
