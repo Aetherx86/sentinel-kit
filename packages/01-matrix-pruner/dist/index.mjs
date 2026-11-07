@@ -731,7 +731,7 @@ for(const _0x8e69n of _0xa5cdr){
 if(_0x8e69n.normPath=== _$s7ea(71)|| _0x8e69n.normPath=== _$s7ea(72)){
 return _0x8e69n.name;
 }
-if(filePath=== _0x8e69n.normPath|| filePath.startsWith(`${pkg.normPath}/`)){
+if(filePath=== _0x8e69n.normPath|| filePath.startsWith(`${_0x8e69n.normPath}/`)){
 return _0x8e69n.name;
 }
 }
@@ -1344,7 +1344,7 @@ if(targetPackage){
 _0x41f918.push(targetPackage.replace(/[^a-zA-Z0-9_-]/g, _$sad(51)));
 }
 const _0x87d219= typeof vars.id=== _$sad(14)&& vars.id.length> 0? vars.id: null;
-const id= _0x87d219?? `${idParts.join('-')}-${index}`;
+const id= _0x87d219?? `${_0x41f918.join(_$sad(22))}-${index}`;
 return{
 id,
 os,
@@ -1454,9 +1454,9 @@ const _0x2b3b1q= new Map();
 for(const _0x71141r of runs){
 const _0xb6ed1s=
 _0x71141r.pullRequestNumber!== undefined
-? `pr:${run.pullRequestNumber}`
-: `branch:${run.branch}`;
-const _0x2a42t= `${run.workflowName}::${scopeKey}`;
+? `pr:${_0x71141r.pullRequestNumber}`
+: `branch:${_0x71141r.branch}`;
+const _0x2a42t= `${_0x71141r.workflowName}::${_0xb6ed1s}`;
 const _0xfcc61t= _0x2b3b1q.get(_0x2a42t)??[];
 _0xfcc61t.push(_0x71141r);
 _0x2b3b1q.set(_0x2a42t, _0xfcc61t);

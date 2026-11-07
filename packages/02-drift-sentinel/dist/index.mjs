@@ -1787,7 +1787,7 @@ const _0x76f79= _0x5f935.toLowerCase();
 return{
 schema: _0x311e8,
 name: _0x76f79,
-qualifiedName: `${finalSchema}.${finalName}`
+qualifiedName: `${_0x311e8}.${_0x76f79}`
 };
 }
 function normalizeCatalog(input){

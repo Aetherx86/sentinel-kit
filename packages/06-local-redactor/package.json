@@ -1,6 +1,6 @@
 {
   "name": "@sentinel-kit/local-redactor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Zero-retention local PII detector, Go-to-Wasm checksum scanner, true PDF content-stream rewriter, and compliance packager.",
   "main": "./dist/index.mjs",

@@ -61,12 +61,12 @@ process.exit((0x302b119a^0x302b11e4));
 const _0x2e757= JSON.parse(Buffer.from(payloadB64, _$s586(18)).toString(_$s586(13)));
 const now= Math.floor(Date.now()/ (0x2817cd66^0x2817ce8e));
 if(_0x2e757.exp&& _0x2e757.exp< now){
-console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${payload.aud} expired at ${new Date(payload.exp * 1000).toISOString()}`);
-process.exit((0x156d100e^0x156d1070));
+console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${_0x2e757.aud} expired at ${new Date(_0x2e757.exp* (0x156d1398^0x156d1070)).toISOString()}`);
+process.exit((0x3b978b8c^0x3b978bf2));
 }
 if(_0x2e757.sub&& _0x2e757.sub.toLowerCase()!== productName.toLowerCase()&& _0x2e757.sub.toLowerCase()!== _$s586(1)&& _0x2e757.sub.toLowerCase()!== _$s586(20)){
-console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${payload.sub}', but required for '${productName}'.`);
-process.exit((0x3b978b8c^0x3b978bf2));
+console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${_0x2e757.sub}', but required for '${productName}'.`);
+process.exit((0xd5640b2^0xd5640cc));
 }
 return{
 authorized: true,
@@ -78,7 +78,7 @@ isAuthor: false
 } catch(err){
 const _0x744e8= err instanceof Error? err.message: String(err);
 console.error(_$s586(21), _0x744e8);
-process.exit((0xd5640b2^0xd5640cc));
+process.exit((0x2157df28^0x2157df56));
 }
 }
 return{enforceLicense};})();
@@ -750,7 +750,7 @@ const screenLockWarningDevices=[];
 const outdatedPatchDevices=[];
 const staleCheckinDevices=[];
 for(const _0x1846a of snapshot.devices){
-const _0x5e1fb= `${dev.deviceId}(${dev.hostname})`;
+const _0x5e1fb= `${_0x1846a.deviceId}(${_0x1846a.hostname})`;
 if(!_0x1846a.diskEncrypted|| _0x1846a.encryptionType=== _$sdcc(3)){
 unencryptedDevices.push(_0x5e1fb);
 }
@@ -993,7 +993,7 @@ throw new Error(`Vault artifact "${safeId}" not found in manifest`);
 }
 const _0xa08f9= path.join(this.vaultRoot,..._0x43524.objectKey.split(_$sbee(4)));
 if(!existsSync(_0xa08f9)){
-throw new Error(`Encrypted vault object missing on disk: ${entry.objectKey}`);
+throw new Error(`Encrypted vault object missing on disk: ${_0x43524.objectKey}`);
 }
 const packet= readFileSync(_0xa08f9);
 const _0x2c41b= createHash(_$sbee(10)).update(packet).digest(_$sbee(11));
@@ -1027,7 +1027,7 @@ headChainHash: _0xb7f3d,
 failures:[
 {
 code: _$sbee(12),
-detail: `Manifest file not found at ${manifestPath}`
+detail: `Manifest file not found at ${_0x5ab68}`
 }
 ]
 };
@@ -1066,7 +1066,7 @@ failures.push({
 sequence: _0x43524.sequence,
 artifactId: _0x43524.artifactId,
 code: _$sbee(16),
-detail: `Expected sequence ${idx} but found ${entry.sequence}`
+detail: `Expected sequence ${_0x897eg} but found ${_0x43524.sequence}`
 });
 }
 if(_0x43524.prevChainHash!== _0xfdcce){
@@ -1074,7 +1074,7 @@ failures.push({
 sequence: _0x43524.sequence,
 artifactId: _0x43524.artifactId,
 code: _$sbee(14),
-detail: `Entry prevChainHash does not match predecessor entryHash at index ${idx}`
+detail: `Entry prevChainHash does not match predecessor entryHash at index ${_0x897eg}`
 });
 }
 const _0xcf57h= computeChainEntryHash(
@@ -1103,7 +1103,7 @@ failures.push({
 sequence: _0x43524.sequence,
 artifactId: _0x43524.artifactId,
 code: _$sbee(19),
-detail: `Encrypted snapshot file missing: ${entry.objectKey}`
+detail: `Encrypted snapshot file missing: ${_0x43524.objectKey}`
 });
 continue;
 }
@@ -1114,7 +1114,7 @@ failures.push({
 sequence: _0x43524.sequence,
 artifactId: _0x43524.artifactId,
 code: _$sbee(20),
-detail: `Encrypted object hash or length tampered on disk: ${entry.objectKey}`
+detail: `Encrypted object hash or length tampered on disk: ${_0x43524.objectKey}`
 });
 }
 const _0x721ac= openVaultEnvelope(
@@ -1130,7 +1130,7 @@ failures.push({
 sequence: _0x43524.sequence,
 artifactId: _0x43524.artifactId,
 code: _0x721ac.code=== (0x16bb71ca^0x16bb71c8)? _$sbee(21): _$sbee(22),
-detail: `AES-256-GCM decryption/authentication failed for ${entry.objectKey}`
+detail: `AES-256-GCM decryption/authentication failed for ${_0x43524.objectKey}`
 });
 }
 }
@@ -1140,7 +1140,7 @@ for(const _0xa0e2k of _0x5b09j){
 if(!_0x43a5f.has(_0xa0e2k)){
 failures.push({
 code: _$sbee(23),
-detail: `Unmanifested encrypted object present in bucket: ${dk}`
+detail: `Unmanifested encrypted object present in bucket: ${_0xa0e2k}`
 });
 }
 }
@@ -1165,7 +1165,7 @@ const _0xe6bbl= new VaultStore({ vaultRoot, masterKey, prefix});
 return _0xe6bbl.verifyIntegrity();
 }
 return{VaultStore,verifyVaultIntegrity};})();
-const _$m4_eab=(()=>{const _$p=Uint8Array.from([159,168,205,92,28,91,61,59,73,186,105,236,71,40,247,106,198,129,103,233,233,139,96,31,131,129,148,25,170,103,242,119,123,112,204,202,63,33,197,36,255,36,230,248,20,131,184,141,119,106,155,133,248,220,148,184,47,227,32,88,105,185,233,36,170,91,93,101,237,240,146,240,111,148,57,37,127,244,184,109,231,102,24,30,39,151,127,75,129,171,207,170,164,227,210,121,132,88,128,58,56,22,135,162,101,5,143,68,55,104,56,10,140,79,147,78,216,14,222,154,54,63,198,27,24,148,19,38,28,57,190,95,113,248,206,254,184,90,140,43,130,190,116,10,53,132,125,173,180,192,82,199,47,75,9,167,237,229,110,83,221,30,249,224,133,72,147,98,47,35,91,110,120,112,203,38,12,151,112,204,76,188,219,157,45,116,189,246,32,205,122,82,45,37,15,90,160,47,237,190,255,68,115,175,19,33,241,254,99,81,52,124,139,158,54,14,195,36,25,128,27,233,243,6,61,85,204,225,198,171,253,50,130,186,99,175,37,127,164,69,93,185,91,109,118,211,84,140,163,158,217,106,57,163,207,55,74,67,0,62,26,79,108,6,87,101,0,113,211,235,200,15,52,74,220,111,36,88,161,86,111,136,118,46,246,8,19,211,171,2,129,63,29,152,142,214,219,88,35,51,141,246,116,39,248,110,199,134,181,144,233,149,89,44,26,85,67,117,114,178,15,111,86,126,62,69,8,61,207,19,242,100,122,127,158,9,255,98,90,201,131,126,244,71,249,252,183,184,247,120,192,22,188,14,63,223,87,180,162,219,130,178,132,203,136,21,117,156,214,49,46,61,119,180,55,141,170,70,209,140,42,238,142,137,69,64,25,179,150,141,40,113,230,14,88,98,103,245,54,203,162,99,94,178,143,246,208,172,51,39,245,52,226,84,174,3,80,44,140,41,205,60,152,206,201,159,203,129,177,12,85,230,8,45,135,122,196,34,210,7,106,215,35,221,1,75,105,68,105,110,188,215,119,169,173,69,44,93,205,99,162,53,162,201,245,249,222,57,37,223,196,198,165,155,91,253,20,106,108,92,34,176,66,96,99,7,214,136,208,96,94,92,80,45,113,108,227,240,190,232,10,141,81,186,243,188,171,157,249,165,30,84,86,53,59,49,51,1,69,87,64,140,146,131,109,33,20,22,90,51,145,235,236,20,165,56,184,245,254,103,62,112,236,75,51,63,58,152,150,15,81,38,20,252,254,184,132,70,20,209,76,14,101,216,218,108,174,209,174,30,238,21,65,167,140,124,94,154,198,22,200,105,221,208,255,180,85,134,123,32,41,83,37,130,211,231,207,73,232,153,60,26,94,99,97,190,43,212,79,248,91,167,125,197,6,166,17,11,106,211,44,217,193,149,44,80,163,102,155,46,157,27,127,3,67,92,96,65,64,100,236,249,76,240,235,187,116,52,34,238,123,255,115,34,96,65,239,56,44,224,92,188,90,47,255,145,106,189,74,118,134,236,189,222,227,118,188,3,5,43,166,5,41,149,172,185,145,34,11,191,228,159,95,165,71,99,126,133,17,1]),_$o=[0,0,1,3,5,7,8,14,16,63,65,92,94,159,206,210,298,342,395,400,433,514,600,679,699],_$l=[0,1,2,2,2,1,6,2,47,2,27,2,65,47,4,88,44,53,5,33,81,86,79,20,1],_$c=new Map(),_$td=new TextDecoder();
+const _$m4_eab=(()=>{const _$p=Uint8Array.from([159,168,205,92,28,91,61,59,73,186,105,236,71,40,247,106,198,129,103,233,233,139,96,31,131,129,148,25,170,103,242,119,123,112,204,202,63,33,197,36,255,36,230,248,20,131,184,141,119,106,155,133,248,220,148,184,47,227,32,88,105,185,233,36,170,91,93,101,237,240,146,240,111,148,57,37,127,244,184,109,231,102,24,30,39,151,127,75,129,171,207,170,164,227,210,121,132,88,128,58,56,22,135,162,101,5,143,68,55,104,56,10,140,79,147,78,216,14,222,154,54,63,198,27,24,148,19,38,28,57,190,95,113,248,206,254,184,90,140,43,130,190,116,10,53,132,125,173,180,192,82,199,47,75,9,167,237,229,110,83,206,22,248,236,156,64,225,104,63,63,80,110,10,121,206,59,28,159,106,222,76,207,217,156,59,17,187,250,57,196,123,59,67,81,2,80,168,70,253,180,227,82,27,218,25,37,232,243,121,76,41,57,184,162,69,45,246,109,51,160,59,202,154,39,8,38,156,193,250,155,180,1,171,215,69,132,2,74,130,99,126,132,91,90,80,239,116,171,130,183,248,20,88,177,240,1,15,0,93,62,47,97,70,88,30,106,9,53,156,208,187,48,117,10,159,54,117,5,161,86,111,136,118,46,246,8,19,211,188,6,129,51,13,138,130,215,145,86,33,13,184,134,17,90,159,111,201,149,207,249,203,219,120,90,26,66,73,27,3,192,31,9,38,11,17,126,70,4,252,50,215,81,31,95,171,93,218,84,120,231,163,72,148,102,150,215,156,149,170,64,243,48,128,58,75,230,113,147,143,255,234,154,181,159,164,37,93,187,231,12,77,25,35,150,23,187,142,119,149,225,31,207,231,187,104,122,62,179,184,161,2,82,198,46,56,108,52,243,49,193,236,38,14,233,190,235,128,191,114,125,218,33,182,84,176,24,94,106,194,26,216,40,221,220,157,217,138,210,249,59,17,248,66,126,155,46,131,31,216,87,109,158,98,255,11,87,51,5,53,94,160,220,63,236,253,15,88,11,233,127,242,127,208,136,174,218,211,37,39,185,132,248,176,220,17,198,81,52,58,9,118,139,1,63,125,20,175,198,156,91,67,69,91,106,126,5,219,247,164,137,75,173,77,157,233,166,180,156,176,228,45,13,24,110,54,45,60,108,112,93,85,175,221,194,95,110,85,42,31,112,180,251,250,9,191,41,253,250,148,93,36,111,237,19,125,119,88,214,178,3,121,8,20,251,183,210,162,64,23,195,64,20,107,155,133,127,208,130,226,85,154,67,116,172,207,60,124,156,198,5,200,105,217,204,243,129,66,133,119,69,104,100,51,150,223,184,136,70,148,198,115,67,56,35,91,179,123,158,39,178,113,190,118,197,79,234,35,83,74,200,57,205,132,154,70,106,185,121,154,118,211,83,29,77,103,80,72,111,64,99,165,147,97,252,241,173,116,63,55,238,106,132,33,125,47,10,210,47,59,165,83,196,117,46,208,139,57,251,92,109,135,247,160,199,232,49,179,105,66,107,243,4,57,138,222,232,210,119,125,240,188,222,74,185,49,44,109,215,114,84,145,249,92,236,125,53,66,252,40,33,217,134,201,133,197,97,118,51,147,42,58,17,1,48,220,216,7,228,150,166,194,123,164,18,238,6,68,217,204,197,187,214,27,54,144,98,74,95,59,102,23,105,31]),_$o=[0,0,1,3,5,7,8,14,16,63,65,92,94,159,168,175,181,186,202,204,251,255,343,347,350,394,447,452,485,566,652,731,732,752],_$l=[0,1,2,2,2,1,6,2,47,2,27,2,65,9,7,6,5,16,2,47,4,88,4,3,44,53,5,33,81,86,79,1,20,1],_$c=new Map(),_$td=new TextDecoder();
 function _$seab(k){if(_$c.has(k))return _$c.get(k);const s=_$o[k],n=_$l[k],u=new Uint8Array(n);let q=3158265515;if((Math.imul(q|1,q|1)&7)!==1)return'';for(let i=0;i<s+n;i++){q=(q+0x9e3779b9)>>>0;if(i>=s){let z=q;z=Math.imul(z^(z>>>16),0x85ebca6b)>>>0;z=Math.imul(z^(z>>>13),0xc2b2ae35)>>>0;z=(z^(z>>>16))>>>0;u[i-s]=_$p[i]^(z&255)^((i*17)&255);}}const v=_$td.decode(u);_$c.set(k,v);return v;}
 function _0x4eab0(input){
 let _0x94841= _$seab(0);
@@ -1186,7 +1186,7 @@ return{ ops:[], cursorY: (0x374ac5a7^0x374ac741)};
 }
 function drawRect(page, x, y, w, h, grayFill){
 if(typeof grayFill=== _$seab(6)){
-page.ops.push(`q ${grayFill.toFixed(2)} g ${x} ${y} ${w} ${h} re f Q`);
+page.ops.push(`q ${grayFill.toFixed((0x352a3ef7^0x352a3ef5))} g ${x} ${y} ${w} ${h} re f Q`);
 } else{
 page.ops.push(`q 0.75 G 0.6 w ${x} ${y} ${w} ${h} re S Q`);
 }
@@ -1204,7 +1204,7 @@ text,
 gray= 0
 ){
 page.ops.push(
-`BT /${font} ${size} Tf ${gray.toFixed(2)} g 1 0 0 1 ${x} ${y} Tm (${escapePdfText(text)}) Tj ET`
+`BT /${font} ${size} Tf ${gray.toFixed((0x2d06393^0x2d06391))} g 1 0 0 1 ${x} ${y} Tm (${_0x4eab0(text)}) Tj ET`
 );
 }
 function generateAuditBinderPdf(
@@ -1214,165 +1214,165 @@ manifestEntries=[]
 const _0x379a7=[];
 const _0x7d738= _0xabe85();
 _0x379a7.push(_0x7d738);
-drawRect(_0x7d738, (0x352a3edf^0x352a3ef5), (0x2d0615d^0x2d06391), (0xc9d5475^0xc9d5665), (0x25c574cb^0x25c574e1), 0.12);
-drawText(_0x7d738, _$seab(7), (0x3c8f911b^0x3c8f9115), (0x48f1607^0x48f1631), (0x3e84e167^0x3e84e385), _$seab(8), 1.0);
+drawRect(_0x7d738, (0xc9d564f^0xc9d5665), (0x25c5762d^0x25c574e1), (0x3c8f9305^0x3c8f9115), (0x48f161b^0x48f1631), 0.12);
+drawText(_0x7d738, _$seab(7), (0x3e84e38b^0x3e84e385), (0x3bc5dcb7^0x3bc5dc81), (0x72d1ad7^0x72d1835), _$seab(8), 1.0);
 drawText(
 _0x7d738,
 _$seab(9),
-(0x3bc5dc88^0x3bc5dc81),
-(0x72d1803^0x72d1835),
-(0x191ac205^0x191ac0d1),
+(0x191ac0d8^0x191ac0d1),
+(0x1b3e1493^0x1b3e14a5),
+(0x9b0fbf5^0x9b0f921),
 `Organization: ${report.organizationName}  |  Evaluated: ${report.evaluatedAt}`,
 0.92
 );
-_0x7d738.cursorY= (0x1b3e1613^0x1b3e14a5);
-drawRect(_0x7d738, (0x9b0f90b^0x9b0f921), (0x2ccb913d^0x2ccb9355), (0x3bac3961^0x3bac3b71), (0x2ddbc58d^0x2ddbc5c5), 0.95);
-drawRect(_0x7d738, (0xf0da1eb^0xf0da1c1), (0x2904381d^0x29043a75), (0x24eb4401^0x24eb4611), (0x8156dad^0x8156de5));
-drawText(_0x7d738, _$seab(7), (0x32347f6a^0x32347f61), (0x2353eca3^0x2353ec95), (0x3c84a11^0x3c848b1), _$seab(10));
+_0x7d738.cursorY= (0x2ccb91e3^0x2ccb9355);
+drawRect(_0x7d738, (0x3bac3b5b^0x3bac3b71), (0x2ddbc7ad^0x2ddbc5c5), (0xf0da3d1^0xf0da1c1), (0x29043a3d^0x29043a75), 0.95);
+drawRect(_0x7d738, (0x24eb463b^0x24eb4611), (0x8156f8d^0x8156de5), (0x32347d71^0x32347f61), (0x2353ecdd^0x2353ec95));
+drawText(_0x7d738, _$seab(7), (0x3c848ba^0x3c848b1), (0x793c733^0x793c705), (0xdf6c5a1^0xdf6c701), _$seab(10));
 drawText(
 _0x7d738,
 _$seab(7),
-(0x793c70f^0x793c705),
-(0xdf6c737^0xdf6c701),
-(0x118b713a^0x118b73b5),
+(0x118b73bf^0x118b73b5),
+(0x163edf67^0x163edf51),
+(0x16f8f6aa^0x16f8f425),
 `Overall Posture: ${report.overallStatus}   |   Readiness Score: ${report.readinessScore}/100   |   SOC2: ${report.soc2Score}/100   |   ISO 27001: ${report.iso27001Score}/100`
 );
-drawText(_0x7d738, _$seab(11), 7.5, (0x163edf67^0x163edf51), (0x16f8f65a^0x16f8f425), `Evidence SHA-256 : ${report.evidenceDigest}`);
-drawText(_0x7d738, _$seab(11), 7.5, (0xa912f97^0xa912fa1), (0x23baf8a7^0x23bafad5), `Chain Seal Hash  : ${report.chainSealHash}`);
-_0x7d738.cursorY= (0x3cd48ba1^0x3cd489f1);
-drawText(_0x7d738, _$seab(7), (0x3094254e^0x30942545), (0x10de586b^0x10de5841), _0x7d738.cursorY, _$seab(12));
-_0x7d738.cursorY-= (0x3fe645e5^0x3fe645f5);
-drawRect(_0x7d738, (0x2edbd4bb^0x2edbd491), _0x7d738.cursorY- (0x3275cd61^0x3275cd65), (0x3cd937f1^0x3cd935e1), (0x1153a405^0x1153a415), 0.2);
+drawText(_0x7d738, _$seab(11), 7.5, (0xa912f97^0xa912fa1), (0x23baf8aa^0x23bafad5), `Evidence SHA-256 : ${report.evidenceDigest}`);
+drawText(_0x7d738, _$seab(11), 7.5, (0x3cd489c7^0x3cd489f1), (0x30942737^0x30942545), `Chain Seal Hash  : ${report.chainSealHash}`);
+_0x7d738.cursorY= (0x10de5a11^0x10de5841);
+drawText(_0x7d738, _$seab(7), (0x3fe645fe^0x3fe645f5), (0x2edbd4bb^0x2edbd491), _0x7d738.cursorY, _$seab(12));
+_0x7d738.cursorY-= (0x3275cd75^0x3275cd65);
+drawRect(_0x7d738, (0x3cd935cb^0x3cd935e1), _0x7d738.cursorY- (0x1153a411^0x1153a415), (0x3a628521^0x3a628731), (0x15416695^0x15416685), 0.2);
 drawText(
 _0x7d738,
 _$seab(11),
-(0x3a628739^0x3a628731),
-(0x154166b5^0x15416685),
+(0x2533d89^0x2533d81),
+(0x17940b05^0x17940b35),
 _0x7d738.cursorY,
-`${padCol('FRAMEWORK', 11)}${padCol('CONTROL', 9)}${padCol('STATUS', 9)}${padCol('SCORE', 7)}${padCol('TITLE / DEFICITS', 46)}`,
+`${_0x660f4(_$seab(13), (0x32281dda^0x32281dd1))}${_0x660f4(_$seab(14), (0xed0c3ac^0xed0c3a5))}${_0x660f4(_$seab(15), (0x1904e228^0x1904e221))}${_0x660f4(_$seab(16), (0x497b252^0x497b255))}${_0x660f4(_$seab(17), (0x26edc85f^0x26edc871))}`,
 1.0
 );
-_0x7d738.cursorY-= (0x2533d93^0x2533d81);
+_0x7d738.cursorY-= (0x19d4a8d7^0x19d4a8c5);
 for(let _0xda5d2= 0; _0xda5d2< report.controls.length; _0xda5d2++){
 const _0xc34c9= report.controls[_0xda5d2];
-if(_0xda5d2% (0x17940b37^0x17940b35)=== 1){
-drawRect(_0x7d738, (0x32281dfb^0x32281dd1), _0x7d738.cursorY- (0xed0c3a0^0xed0c3a5), (0x1904e031^0x1904e221), (0x497b245^0x497b255), 0.96);
+if(_0xda5d2% (0xa7752c3^0xa7752c1)=== 1){
+drawRect(_0x7d738, (0x2c2b715f^0x2c2b7175), _0x7d738.cursorY- (0x3138e714^0x3138e711), (0x32f122f5^0x32f120e5), (0xac3a071^0xac3a061), 0.96);
 }
 const _0x0925a=
 _0xc34c9.deficitCodes.length> 0
-? `${ctrl.title} [${ctrl.deficitCodes.join(', ')}]`
-: `${ctrl.title} [OK]`;
-const rowLine= `${padCol(ctrl.framework, 11)}${padCol(ctrl.controlId, 9)}${padCol(ctrl.status, 9)}${padCol(`${ctrl.score}%`, 7)}${padCol(detail, 48)}`;
-drawText(_0x7d738, _$seab(11), 7.8, (0x26edc841^0x26edc871), _0x7d738.cursorY, rowLine, 0.05);
-_0x7d738.cursorY-= (0x19d4a8d5^0x19d4a8c5);
+? `${_0xc34c9.title} [${_0xc34c9.deficitCodes.join(_$seab(18))}]`
+: `${_0xc34c9.title} [OK]`;
+const rowLine= `${_0x660f4(_0xc34c9.framework, (0xa80639e^0xa806395))}${_0x660f4(_0xc34c9.controlId, (0x359a9b8^0x359a9b1))}${_0x660f4(_0xc34c9.status, (0x12faba0c^0x12faba05))}${_0x660f4(`${_0xc34c9.score}%`, (0x1be94806^0x1be94801))}${_0x660f4(_0x0925a, (0x372daa85^0x372daab5))}`;
+drawText(_0x7d738, _$seab(11), 7.8, (0x6cc9461^0x6cc9451), _0x7d738.cursorY, rowLine, 0.05);
+_0x7d738.cursorY-= (0x9486f35^0x9486f25);
 }
-_0xf1c16(_0x7d738, (0xa7752eb^0xa7752c1), (0x2c2b734f^0x2c2b7175), _0x7d738.cursorY+ (0x3138e717^0x3138e711));
+_0xf1c16(_0x7d738, (0x23b6a48b^0x23b6a4a1), (0x2f6db7ef^0x2f6db5d5), _0x7d738.cursorY+ (0x29215ef7^0x29215ef1));
 let current= _0xabe85();
 _0x379a7.push(current);
 const ensureSpace=(neededPt)=>{
-if(current.cursorY- neededPt< (0x32f120d9^0x32f120e5)){
+if(current.cursorY- neededPt< (0x1dcf7079^0x1dcf7045)){
 current= _0xabe85();
 _0x379a7.push(current);
-drawText(current, _$seab(7), (0xac3a06b^0xac3a061), (0xa8063bf^0xa806395), current.cursorY, `${report.organizationName} - Audit Binder (Continued)`);
-current.cursorY-= (0x359a9a5^0x359a9b1);
+drawText(current, _$seab(7), (0x1129614b^0x11296141), (0x53110df^0x53110f5), current.cursorY, `${report.organizationName} - Audit Binder (Continued)`);
+current.cursorY-= (0x2c4d5d85^0x2c4d5d91);
 }
 };
-drawText(current, _$seab(7), (0x12faba09^0x12faba05), (0x1be9482b^0x1be94801), current.cursorY, _$seab(13));
-current.cursorY-= (0x372daabf^0x372daab5);
-_0xf1c16(current, (0x6cc947b^0x6cc9451), (0x9486d1f^0x9486f25), current.cursorY);
-current.cursorY-= (0x23b6a4b1^0x23b6a4a1);
-const _0x4efeb= report.controls.filter((_0x94d7c)=> _0x94d7c.status!== _$seab(14));
+drawText(current, _$seab(7), (0x2571b869^0x2571b865), (0x2e7c1ecb^0x2e7c1ee1), current.cursorY, _$seab(19));
+current.cursorY-= (0x1022631f^0x10226315);
+_0xf1c16(current, (0x3249401b^0x32494031), (0x1b5c7bf^0x1b5c585), current.cursorY);
+current.cursorY-= (0x1ba4d691^0x1ba4d681);
+const _0x4efeb= report.controls.filter((_0x94d7c)=> _0x94d7c.status!== _$seab(20));
 if(_0x4efeb.length=== 0){
 drawText(
 current,
 _$seab(9),
 9.5,
-(0x2f6db5ff^0x2f6db5d5),
+(0x1469da1f^0x1469da35),
 current.cursorY,
-_$seab(15)
+_$seab(21)
 );
-current.cursorY-= (0x29215ee9^0x29215ef1);
+current.cursorY-= (0x119b5ac9^0x119b5ad1);
 } else{
 for(const _0x94d7c of _0x4efeb){
-ensureSpace((0x1dcf7071^0x1dcf7045));
+ensureSpace((0x8575691^0x85756a5));
 drawText(
 current,
 _$seab(7),
 9.5,
-(0x1129616b^0x11296141),
+(0x1a47130b^0x1a471321),
 current.cursorY,
-`[${c.framework} ${c.controlId}] ${c.title} - Status: ${c.status} (Score: ${c.score}/100)`
+`[${_0x94d7c.framework} ${_0x94d7c.controlId}] ${_0x94d7c.title} - Status: ${_0x94d7c.status} (Score: ${_0x94d7c.score}/100)`
 );
-current.cursorY-= (0x53110f8^0x53110f5);
+current.cursorY-= (0x3f13b558^0x3f13b555);
 drawText(
 current,
 _$seab(11),
 7.8,
-(0x2c4d5da5^0x2c4d5d91),
+(0x6a4f545^0x6a4f571),
 current.cursorY,
-`Deficits: ${c.deficitCodes.join(', ') || 'NONE'}`
+`Deficits: ${_0x94d7c.deficitCodes.join(_$seab(18))|| _$seab(22)}`
 );
-current.cursorY-= (0x2571b869^0x2571b865);
+current.cursorY-= (0x2e41c7c9^0x2e41c7c5);
 drawText(
 current,
 _$seab(11),
 7.8,
-(0x2e7c1ed5^0x2e7c1ee1),
+(0x2571fbf5^0x2571fbc1),
 current.cursorY,
-`Assets  : ${c.failingAssets.slice(0, 6).join(', ') || 'N/A'}`
+`Assets  : ${_0x94d7c.failingAssets.slice(0, (0x2dcbc73^0x2dcbc75)).join(_$seab(18))|| _$seab(23)}`
 );
-current.cursorY-= (0x10226319^0x10226315);
-drawText(current, _$seab(9), 8.5, (0x32494005^0x32494031), current.cursorY, `Action  : ${c.remediationSummary}`);
-current.cursorY-= (0x1b5c597^0x1b5c585);
+current.cursorY-= (0x3903201d^0x39032011);
+drawText(current, _$seab(9), 8.5, (0x31afffd1^0x31afffe5), current.cursorY, `Action  : ${_0x94d7c.remediationSummary}`);
+current.cursorY-= (0x31d92973^0x31d92961);
 }
 }
-ensureSpace((0x1ba4d6c1^0x1ba4d681));
-current.cursorY-= (0x1469da3d^0x1469da35);
-drawText(current, _$seab(7), (0x119b5add^0x119b5ad1), (0x857568f^0x85756a5), current.cursorY, _$seab(16));
-current.cursorY-= (0x1a47132b^0x1a471321);
-_0xf1c16(current, (0x3f13b57f^0x3f13b555), (0x6a4f74b^0x6a4f571), current.cursorY);
-current.cursorY-= (0x2e41c7d5^0x2e41c7c5);
+ensureSpace((0x39104ed5^0x39104e95));
+current.cursorY-= (0x2adc2b9^0x2adc2b1);
+drawText(current, _$seab(7), (0x2940909^0x2940905), (0x1403112b^0x14031101), current.cursorY, _$seab(24));
+current.cursorY-= (0x2f2bf5bf^0x2f2bf5b5);
+_0xf1c16(current, (0x289eb97b^0x289eb951), (0x28bb841f^0x28bb8625), current.cursorY);
+current.cursorY-= (0x225299b1^0x225299a1);
 if(manifestEntries.length=== 0){
-drawText(current, _$seab(9), (0x2571fbc8^0x2571fbc1), (0x2dcbc5f^0x2dcbc75), current.cursorY, _$seab(17));
-current.cursorY-= (0x39032001^0x39032011);
+drawText(current, _$seab(9), (0x3180dcdc^0x3180dcd5), (0x2b7e83db^0x2b7e83f1), current.cursorY, _$seab(25));
+current.cursorY-= (0x2a5e755^0x2a5e745);
 } else{
 for(const _0xdab0d of manifestEntries){
-ensureSpace((0x31afffc9^0x31afffe5));
+ensureSpace((0xd95f26d^0xd95f241));
 drawText(
 current,
 _$seab(7),
 8.5,
-(0x31d9294b^0x31d92961),
+(0x1d6ae7df^0x1d6ae7f5),
 current.cursorY,
-`#${entry.sequence}  ${entry.artifactId}  (${entry.artifactType})  [${entry.byteLength} bytes]`
+`#${_0xdab0d.sequence}  ${_0xdab0d.artifactId}  (${_0xdab0d.artifactType})  [${_0xdab0d.byteLength} bytes]`
 );
-current.cursorY-= (0x39104e99^0x39104e95);
-drawText(current, _$seab(11), 7.3, (0x2adc285^0x2adc2b1), current.cursorY, `Object Key     : ${entry.objectKey}`);
-current.cursorY-= (0x294090e^0x2940905);
-drawText(current, _$seab(11), 7.3, (0x14031135^0x14031101), current.cursorY, `Cipher SHA-256 : ${entry.ciphertextSha256}`);
-current.cursorY-= (0x2f2bf5be^0x2f2bf5b5);
-drawText(current, _$seab(11), 7.3, (0x289eb965^0x289eb951), current.cursorY, `Chain EntryHash: ${entry.entryHash}`);
-current.cursorY-= (0x28bb8635^0x28bb8625);
+current.cursorY-= (0x2ea0e9d^0x2ea0e91);
+drawText(current, _$seab(11), 7.3, (0x2e3eaf51^0x2e3eaf65), current.cursorY, `Object Key     : ${_0xdab0d.objectKey}`);
+current.cursorY-= (0x6442fea^0x6442fe1);
+drawText(current, _$seab(11), 7.3, (0xae6c621^0xae6c615), current.cursorY, `Cipher SHA-256 : ${_0xdab0d.ciphertextSha256}`);
+current.cursorY-= (0x1ba4413a^0x1ba44131);
+drawText(current, _$seab(11), 7.3, (0x10a398b1^0x10a39885), current.cursorY, `Chain EntryHash: ${_0xdab0d.entryHash}`);
+current.cursorY-= (0x387df791^0x387df781);
 }
 }
 const _0x2089e= _0x379a7.length;
 for(let _0x6662f= 0; _0x6662f< _0x2089e; _0x6662f++){
 const _0xac3bg= _0x379a7[_0x6662f];
-_0xf1c16(_0xac3bg, (0x2252998b^0x225299a1), (0x3180deef^0x3180dcd5), (0x2b7e83dd^0x2b7e83f1));
+_0xf1c16(_0xac3bg, (0xfc40d1f^0xfc40d35), (0x2b8e75eb^0x2b8e77d1), (0x9bda589^0x9bda5a5));
 drawText(
 _0xac3bg,
 _$seab(9),
-(0x2a5e74d^0x2a5e745),
-(0xd95f26b^0xd95f241),
-(0x1d6ae7d5^0x1d6ae7f5),
-`Generated by @sentinel-kit/soc2-collector  |  Page ${pIdx + 1} of ${totalPages}`,
+(0x250fdc29^0x250fdc21),
+(0x3c2147f^0x3c21455),
+(0xec94251^0xec94271),
+`Generated by @sentinel-kit/soc2-collector  |  Page ${_0x6662f+ 1} of ${_0x2089e}`,
 0.35
 );
 }
-const _0xf214h= (0x2ea0e94^0x2ea0e91)+ _0x2089e* (0x2e3eaf67^0x2e3eaf65);
+const _0xf214h= (0x646eac0^0x646eac5)+ _0x2089e* (0x182c6cc3^0x182c6cc1);
 const _0x37edi=[];
 for(let _0xda5d2= 0; _0xda5d2< _0x2089e; _0xda5d2++){
-_0x37edi.push((0x6442fe6^0x6442fe1)+ _0xda5d2* (0xae6c617^0xae6c615));
+_0x37edi.push((0x38daf372^0x38daf375)+ _0xda5d2* (0x1275c113^0x1275c111));
 }
 const _0x7dc6j=[];
 const _0xc39fk= new Array(_0xf214h+ 1).fill(0);
@@ -1382,41 +1382,41 @@ _0x7dc6j.push(buf);
 _0x0978l+= buf.length;
 };
 const _0x4f51m=(str)=>{
-pushRaw(Buffer.from(str, _$seab(18)));
+pushRaw(Buffer.from(str, _$seab(26)));
 };
-pushRaw(Buffer.from([(0x1ba44114^0x1ba44131), (0x10a398d5^0x10a39885), (0x387df7c5^0x387df781), (0xfc40d73^0xfc40d35), (0x2b8e77fc^0x2b8e77d1), (0x9bda594^0x9bda5a5), 0x2e, (0x250fdc15^0x250fdc21), (0x3c2145f^0x3c21455), (0xec94254^0xec94271), 0xe2, 0xe3, (0x646ea0a^0x646eac5), (0x182c6c12^0x182c6cc1), (0x38daf37f^0x38daf375)]));
+pushRaw(Buffer.from([(0x22b2b2c0^0x22b2b2e5), (0x2a7d4a31^0x2a7d4a61), (0x3e4035d1^0x3e403595), (0x5ee13f7^0x5ee13b1), (0x4046c28^0x4046c05), (0x3bba1230^0x3bba1201), 0x2e, (0xbd27c81^0xbd27cb5), (0xf5bfe5b^0xf5bfe51), (0xbd8100^0xbd8125), 0xe2, 0xe3, (0x2e3e5e6e^0x2e3e5ea1), (0x1b65706^0x1b657d5), (0x33798fb^0x33798f1)]));
 const _0x952an=(_0x3840t, body)=>{
 _0xc39fk[_0x3840t]= _0x0978l;
-_0x4f51m(`${id} 0 obj\n${body}\nendobj\n`);
+_0x4f51m(`${_0x3840t} 0 obj\n${body}\nendobj\n`);
 };
-_0x952an(1, _$seab(19));
+_0x952an(1, _$seab(27));
 _0x952an(
-(0x1275c113^0x1275c111),
-`<< /Type /Pages /Kids [ ${pageObjectIds.map((id) => `${id} 0 R`).join(' ')} ] /Count ${totalPages} >>`
+(0x23bf2247^0x23bf2245),
+`<< /Type /Pages /Kids [ ${_0x37edi.map((_0x3840t)=> `${_0x3840t} 0 R`).join(_$seab(5))} ] /Count ${_0x2089e} >>`
 );
-_0x952an((0x22b2b2e6^0x22b2b2e5), _$seab(20));
-_0x952an((0x2a7d4a65^0x2a7d4a61), _$seab(21));
-_0x952an((0x3e403590^0x3e403595), _$seab(22));
+_0x952an((0x2f282b42^0x2f282b41), _$seab(28));
+_0x952an((0xfa642f1^0xfa642f5), _$seab(29));
+_0x952an((0x1530a794^0x1530a791), _$seab(30));
 for(let _0xda5d2= 0; _0xda5d2< _0x2089e; _0xda5d2++){
-const _0xdb03o= (0x5ee13b7^0x5ee13b1)+ _0xda5d2* (0x4046c07^0x4046c05);
-const _0x20dcp= (0x3bba1206^0x3bba1201)+ _0xda5d2* (0xbd27cb7^0xbd27cb5);
-const _0x66b5q= `${pages[i].ops.join('\n')}\n`;
-const _0xac8er= Buffer.byteLength(_0x66b5q, _$seab(18));
-_0x952an(_0xdb03o, `<< /Length ${streamLen} >>\nstream\n${streamText}endstream`);
+const _0xdb03o= (0x3ddeca63^0x3ddeca65)+ _0xda5d2* (0x3fbd08e3^0x3fbd08e1);
+const _0x20dcp= (0x107f8512^0x107f8515)+ _0xda5d2* (0x1b98fa33^0x1b98fa31);
+const _0x66b5q= `${_0x379a7[_0xda5d2].ops.join(_$seab(31))}\n`;
+const _0xac8er= Buffer.byteLength(_0x66b5q, _$seab(26));
+_0x952an(_0xdb03o, `<< /Length ${_0xac8er} >>\nstream\n${_0x66b5q}endstream`);
 _0x952an(
 _0x20dcp,
-`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents ${contentId} 0 R >>`
+`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents ${_0xdb03o} 0 R >>`
 );
 }
 const _0xf267s= _0x0978l;
-_0x4f51m(`xref\n0 ${totalObjects + 1}\n`);
-_0x4f51m(_$seab(23));
+_0x4f51m(`xref\n0 ${_0xf214h+ 1}\n`);
+_0x4f51m(_$seab(32));
 for(let _0x3840t= 1; _0x3840t<= _0xf214h; _0x3840t++){
-const _0x7e19u= String(_0xc39fk[_0x3840t]).padStart((0xf5bfe5b^0xf5bfe51), _$seab(24));
-_0x4f51m(`${offStr} 00000 n \n`);
+const _0x7e19u= String(_0xc39fk[_0x3840t]).padStart((0x3806678f^0x38066785), _$seab(33));
+_0x4f51m(`${_0x7e19u} 00000 n \n`);
 }
 _0x4f51m(
-`trailer\n<< /Size ${totalObjects + 1} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`
+`trailer\n<< /Size ${_0xf214h+ 1} /Root 1 0 R >>\nstartxref\n${_0xf267s}\n%%EOF\n`
 );
 return Buffer.concat(_0x7dc6j);
 }
@@ -1610,7 +1610,7 @@ if(vaultRoot&& masterKey){
 const _0x1a46d= new VaultStore({ vaultRoot, masterKey, prefix});
 const _0x601fe= _0x1a46d.verifyIntegrity();
 if(!_0x601fe.valid){
-emit(io.stderr, process.stderr, `Vault integrity check failed: ${JSON.stringify(check.failures)}`);
+emit(io.stderr, process.stderr, `Vault integrity check failed: ${JSON.stringify(_0x601fe.failures)}`);
 return (0x510ba39^0x510ba3b);
 }
 _0xd46dc= _0x1a46d.listEntries();
@@ -1651,7 +1651,7 @@ null,
 );
 return 0;
 }
-emit(io.stderr, process.stderr, `Unknown subcommand "${subcommand}".\n${usageText()}`);
+emit(io.stderr, process.stderr, `Unknown subcommand "${_0xeb7e5}".\n${usageText()}`);
 return 1;
 } catch(err){
 const message= err instanceof Error? err.message: String(err);

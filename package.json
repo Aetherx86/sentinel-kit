@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-suite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "description": "Six deterministic B2B and prosumer micro-SaaS MVPs with obfuscated core kernels, build-time bundle obfuscation, and full verification suites.",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "node --no-warnings tools/obfuscate.mjs",
     "test:src": "node --no-warnings --test packages/*/test/*.test.ts",
-    "test:dist": "node --no-warnings --test test/dist-equivalence.test.ts",
+    "test:dist": "node --no-warnings --test test/*.test.ts",
     "test": "npm run build && npm run test:src && npm run test:dist"
   }
 }

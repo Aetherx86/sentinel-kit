@@ -63,12 +63,12 @@ process.exit((0x2ac92c25^0x2ac92c5b));
 const _0x71b07= JSON.parse(Buffer.from(payloadB64, _$s8c1(18)).toString(_$s8c1(13)));
 const now= Math.floor(Date.now()/ (0x25dd450f^0x25dd46e7));
 if(_0x71b07.exp&& _0x71b07.exp< now){
-console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${payload.aud} expired at ${new Date(payload.exp * 1000).toISOString()}`);
-process.exit((0xc06e4c5^0xc06e4bb));
+console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${_0x71b07.aud} expired at ${new Date(_0x71b07.exp* (0xc06e753^0xc06e4bb)).toISOString()}`);
+process.exit((0x1c54f2b9^0x1c54f2c7));
 }
 if(_0x71b07.sub&& _0x71b07.sub.toLowerCase()!== productName.toLowerCase()&& _0x71b07.sub.toLowerCase()!== _$s8c1(1)&& _0x71b07.sub.toLowerCase()!== _$s8c1(20)){
-console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${payload.sub}', but required for '${productName}'.`);
-process.exit((0x1c54f2b9^0x1c54f2c7));
+console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${_0x71b07.sub}', but required for '${productName}'.`);
+process.exit((0x36b87b65^0x36b87b1b));
 }
 return{
 authorized: true,
@@ -80,7 +80,7 @@ isAuthor: false
 } catch(err){
 const _0xb7898= err instanceof Error? err.message: String(err);
 console.error(_$s8c1(21), _0xb7898);
-process.exit((0x36b87b65^0x36b87b1b));
+process.exit((0x3b0584d9^0x3b0584a7));
 }
 }
 return{enforceLicense};})();
@@ -678,7 +678,7 @@ const _0x4d84g= typeof _0x35cd1.available=== _$sff4(9)
 ? _0x07abf> 0
 : true;
 variants.push({
-variantId: String(_0x35cd1.id?? `${productId}-${variants.length + 1}`),
+variantId: String(_0x35cd1.id?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0x35cd1.sku=== _$sff4(8)&& _0x35cd1.sku.length> 0? _0x35cd1.sku: null,
 title: typeof _0x35cd1.title=== _$sff4(8)&& _0x35cd1.title.length> 0? _0x35cd1.title: _$sff4(10),
 available: _0x4d84g,
@@ -752,7 +752,7 @@ const _0xc27810= Array.isArray(_0xd989t.attributes)
 .join(_$sff4(15))
 : _$sff4(0);
 variants.push({
-variantId: String(_0xd989t.id?? `${productId}-${variants.length + 1}`),
+variantId: String(_0xd989t.id?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0xd989t.sku=== _$sff4(8)&& _0xd989t.sku.length> 0? _0xd989t.sku:(typeof raw.sku=== _$sff4(8)&& raw.sku.length> 0? raw.sku: null),
 title: _0xc27810|| String(_0xd989t.name?? _$sff4(16)),
 available: _0x36c6y,
@@ -853,7 +853,7 @@ const priceCents= _0x7ba62(_0xf14018, false);
 if(priceCents=== null) continue;
 const _0x371919= _0x7ba62(_0xab6717.highPrice, false);
 const sku= typeof _0xab6717.sku=== _$sff4(8)&& _0xab6717.sku.length> 0? _0xab6717.sku: fallbackSku;
-const _0x7cf21a= String(_0xab6717.sku?? _0xab6717[_$sff4(28)]?? _0xab6717.identifier?? `${fallbackId}-${variants.length + 1}`);
+const _0x7cf21a= String(_0xab6717.sku?? _0xab6717[_$sff4(28)]?? _0xab6717.identifier?? `${fallbackId}-${variants.length+ 1}`);
 const _0xc2cb1b= _0xf047b(_0xab6717.inventoryLevel)&& typeof _0xab6717.inventoryLevel.value=== _$sff4(1)
 ? _0xab6717.inventoryLevel.value
 : null;
@@ -1003,7 +1003,7 @@ const _0x66341s= typeof _0xd989t.available=== _$sff4(9)
 ? _0x205b1r> 0
 : false;
 variants.push({
-variantId: String(_0xd989t.id?? _0xd989t.variantId?? _0xd989t.sku?? `${productId}-${variants.length + 1}`),
+variantId: String(_0xd989t.id?? _0xd989t.variantId?? _0xd989t.sku?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0xd989t.sku=== _$sff4(8)&& _0xd989t.sku.length> 0? _0xd989t.sku: null,
 title: String(_0xd989t.title?? _0xd989t.name?? _0xd989t.size?? _$sff4(16)),
 available: _0x66341s,
@@ -1096,7 +1096,7 @@ const defaultCurrency=(input.defaultCurrency?? _$sff4(43)).toUpperCase();
 const diagnostics=[];
 const challenge= detectBotChallenge(statusCode, input.headers, input.body);
 if(challenge.challenged){
-diagnostics.push(`bot-challenge:${challenge.vendor ?? 'unknown'}`);
+diagnostics.push(`bot-challenge:${challenge.vendor?? _$sff4(44)}`);
 return{
 ok: false,
 platform: _$sff4(44),
@@ -1304,7 +1304,7 @@ const _0x72f73= Number.parseInt(timestampHeader, (0x755c328^0x755c322));
 if(!Number.isFinite(_0x72f73)|| Math.abs(nowSec- _0x72f73)> toleranceSec){
 return false;
 }
-const _0xb8d04= `sha256=${createHmac('sha256', secret).update(`${parsedTs}.${rawBody}`, 'utf8').digest('hex')}`;
+const _0xb8d04= `sha256=${createHmac(_$s16c(1), secret).update(`${_0x72f73}.${rawBody}`, _$s16c(2)).digest(_$s16c(3))}`;
 const _0xfea95= Buffer.from(_0xb8d04, _$s16c(2));
 const _0x44826= Buffer.from(signatureHeader, _$s16c(2));
 if(_0xfea95.length!== _0x44826.length) return false;
@@ -1682,7 +1682,7 @@ printUsage(_0x5ba17);
 return 1;
 } catch(err){
 const _0xe7a6k= err instanceof Error? err.message: String(err);
-_0x5ba17.stderr(`Error: ${msg}\n`);
+_0x5ba17.stderr(`Error: ${_0xe7a6k}\n`);
 return 1;
 }
 }

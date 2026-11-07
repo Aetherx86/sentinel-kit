@@ -62,12 +62,12 @@ process.exit((0x135c8869^0x135c8817));
 const _0x7efc7= JSON.parse(Buffer.from(payloadB64, _$s60d(18)).toString(_$s60d(13)));
 const now= Math.floor(Date.now()/ (0x2d5ae263^0x2d5ae18b));
 if(_0x7efc7.exp&& _0x7efc7.exp< now){
-console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${payload.aud} expired at ${new Date(payload.exp * 1000).toISOString()}`);
-process.exit((0x18125e89^0x18125ef7));
+console.error(`\x1b[31m[AETHER LICENSE EXPIRED]\x1b[0m License for ${_0x7efc7.aud} expired at ${new Date(_0x7efc7.exp* (0x18125d1f^0x18125ef7)).toISOString()}`);
+process.exit((0x343c9995^0x343c99eb));
 }
 if(_0x7efc7.sub&& _0x7efc7.sub.toLowerCase()!== productName.toLowerCase()&& _0x7efc7.sub.toLowerCase()!== _$s60d(1)&& _0x7efc7.sub.toLowerCase()!== _$s60d(20)){
-console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${payload.sub}', but required for '${productName}'.`);
-process.exit((0x343c9995^0x343c99eb));
+console.error(`\x1b[31m[AETHER LICENSE MISMATCH]\x1b[0m Key issued for '${_0x7efc7.sub}', but required for '${productName}'.`);
+process.exit((0x13aed7a9^0x13aed7d7));
 }
 return{
 authorized: true,
@@ -79,7 +79,7 @@ isAuthor: false
 } catch(err){
 const _0xc4d58= err instanceof Error? err.message: String(err);
 console.error(_$s60d(21), _0xc4d58);
-process.exit((0x13aed7a9^0x13aed7d7));
+process.exit((0x3f82ef35^0x3f82ef4b));
 }
 }
 return{enforceLicense};})();
@@ -1835,7 +1835,7 @@ printUsage(_0x9c657);
 return 1;
 } catch(err){
 const _0x56dfh= err instanceof Error? err.message: String(err);
-_0x9c657.stderr(`Error: ${msg}\n`);
+_0x9c657.stderr(`Error: ${_0x56dfh}\n`);
 return 1;
 }
 }

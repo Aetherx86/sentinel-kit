@@ -595,7 +595,7 @@ const _0x4d84g= typeof _0x35cd1.available=== _$sff4(9)
 ? _0x07abf> 0
 : true;
 variants.push({
-variantId: String(_0x35cd1.id?? `${productId}-${variants.length + 1}`),
+variantId: String(_0x35cd1.id?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0x35cd1.sku=== _$sff4(8)&& _0x35cd1.sku.length> 0? _0x35cd1.sku: null,
 title: typeof _0x35cd1.title=== _$sff4(8)&& _0x35cd1.title.length> 0? _0x35cd1.title: _$sff4(10),
 available: _0x4d84g,
@@ -669,7 +669,7 @@ const _0xc27810= Array.isArray(_0xd989t.attributes)
 .join(_$sff4(15))
 : _$sff4(0);
 variants.push({
-variantId: String(_0xd989t.id?? `${productId}-${variants.length + 1}`),
+variantId: String(_0xd989t.id?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0xd989t.sku=== _$sff4(8)&& _0xd989t.sku.length> 0? _0xd989t.sku:(typeof raw.sku=== _$sff4(8)&& raw.sku.length> 0? raw.sku: null),
 title: _0xc27810|| String(_0xd989t.name?? _$sff4(16)),
 available: _0x36c6y,
@@ -770,7 +770,7 @@ const priceCents= _0x7ba62(_0xf14018, false);
 if(priceCents=== null) continue;
 const _0x371919= _0x7ba62(_0xab6717.highPrice, false);
 const sku= typeof _0xab6717.sku=== _$sff4(8)&& _0xab6717.sku.length> 0? _0xab6717.sku: fallbackSku;
-const _0x7cf21a= String(_0xab6717.sku?? _0xab6717[_$sff4(28)]?? _0xab6717.identifier?? `${fallbackId}-${variants.length + 1}`);
+const _0x7cf21a= String(_0xab6717.sku?? _0xab6717[_$sff4(28)]?? _0xab6717.identifier?? `${fallbackId}-${variants.length+ 1}`);
 const _0xc2cb1b= _0xf047b(_0xab6717.inventoryLevel)&& typeof _0xab6717.inventoryLevel.value=== _$sff4(1)
 ? _0xab6717.inventoryLevel.value
 : null;
@@ -920,7 +920,7 @@ const _0x66341s= typeof _0xd989t.available=== _$sff4(9)
 ? _0x205b1r> 0
 : false;
 variants.push({
-variantId: String(_0xd989t.id?? _0xd989t.variantId?? _0xd989t.sku?? `${productId}-${variants.length + 1}`),
+variantId: String(_0xd989t.id?? _0xd989t.variantId?? _0xd989t.sku?? `${productId}-${variants.length+ 1}`),
 sku: typeof _0xd989t.sku=== _$sff4(8)&& _0xd989t.sku.length> 0? _0xd989t.sku: null,
 title: String(_0xd989t.title?? _0xd989t.name?? _0xd989t.size?? _$sff4(16)),
 available: _0x66341s,
@@ -1013,7 +1013,7 @@ const defaultCurrency=(input.defaultCurrency?? _$sff4(43)).toUpperCase();
 const diagnostics=[];
 const challenge= detectBotChallenge(statusCode, input.headers, input.body);
 if(challenge.challenged){
-diagnostics.push(`bot-challenge:${challenge.vendor ?? 'unknown'}`);
+diagnostics.push(`bot-challenge:${challenge.vendor?? _$sff4(44)}`);
 return{
 ok: false,
 platform: _$sff4(44),
@@ -1221,7 +1221,7 @@ const _0x72f73= Number.parseInt(timestampHeader, (0x755c328^0x755c322));
 if(!Number.isFinite(_0x72f73)|| Math.abs(nowSec- _0x72f73)> toleranceSec){
 return false;
 }
-const _0xb8d04= `sha256=${createHmac('sha256', secret).update(`${parsedTs}.${rawBody}`, 'utf8').digest('hex')}`;
+const _0xb8d04= `sha256=${createHmac(_$s16c(1), secret).update(`${_0x72f73}.${rawBody}`, _$s16c(2)).digest(_$s16c(3))}`;
 const _0xfea95= Buffer.from(_0xb8d04, _$s16c(2));
 const _0x44826= Buffer.from(signatureHeader, _$s16c(2));
 if(_0xfea95.length!== _0x44826.length) return false;
